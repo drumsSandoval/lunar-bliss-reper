@@ -1,72 +1,331 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="banner__cherry--funk" />
+    <div class="banner__cherry--funk"></div>
     <main>
       <h1>Lunar Bliss Repertoire</h1>
       <ul>
-        <li><strong>About Damn Time</strong> <span style="font-size: smaller;">(Lizzo)</span></li>
-        <li><strong>Ain't No Sunshine</strong> <span style="font-size: smaller;">(Bill Withers)</span></li>
-        <li><strong>Bésame Mucho</strong> <span style="font-size: smaller;">(Consuelo Velázquez)</span></li>
-        <li><strong>Blinding Lights</strong> <span style="font-size: smaller;">(The Weeknd)</span></li>
-        <li><strong>Breezin'</strong> <span style="font-size: smaller;">(George Benson)</span></li>
-        <li><strong>Calm Down</strong> <span style="font-size: smaller;">(Rema & Selena Gomez)</span></li>
-        <li><strong>Cantaloop</strong> <span style="font-size: smaller;">(Us3)</span></li>
-        <li><strong>Can't Stop the Feeling!</strong> <span style="font-size: smaller;">(Justin Timberlake)</span></li>
-        <li><strong>Celebration</strong> <span style="font-size: smaller;">(Kool & The Gang)</span></li>
-        <li><strong>Cold Heart</strong> <span style="font-size: smaller;">(Elton John & Dua Lipa)</span></li>
-        <li><strong>Crazy in Love</strong> <span style="font-size: smaller;">(Beyoncé feat. Jay-Z)</span></li>
-        <li><strong>Diggin’ on James Brown</strong> <span style="font-size: smaller;">(Tower of Power)</span></li>
-        <li><strong>Do I Do</strong> <span style="font-size: smaller;">(Stevie Wonder)</span></li>
-        <li><strong>Don't Start Now</strong> <span style="font-size: smaller;">(Dua Lipa)</span></li>
-        <li><strong>Feel So Good</strong> <span style="font-size: smaller;">(Chuck Mangione)</span></li>
-        <li><strong>Flowers</strong> <span style="font-size: smaller;">(Miley Cyrus)</span></li>
-        <li><strong>Funky Town</strong> <span style="font-size: smaller;">(Lipps Inc.)</span></li>
-        <li><strong>Get Lucky</strong> <span style="font-size: smaller;">(Daft Punk feat. Pharrell Williams)</span></li>
-        <li><strong>Give Me the Night</strong> <span style="font-size: smaller;">(George Benson)</span></li>
-        <li><strong>I Will Survive</strong> <span style="font-size: smaller;">(Gloria Gaynor)</span></li>
-        <li><strong>Isn't She Lovely</strong> <span style="font-size: smaller;">(Stevie Wonder)</span></li>
-        <li><strong>In da Club</strong> <span style="font-size: smaller;">(50 Cent)</span></li>
-        <li><strong>Jungle Boogie</strong> <span style="font-size: smaller;">(Kool & The Gang)</span></li>
-        <li><strong>Just the Way You Are</strong> <span style="font-size: smaller;">(Bruno Mars)</span></li>
-        <li><strong>Just the Two of Us</strong> <span style="font-size: smaller;">(Bill Withers)</span></li>
-        <li><strong>Le Freak</strong> <span style="font-size: smaller;">(Chic)</span></li>
-        <li><strong>Leave the Door Open</strong> <span style="font-size: smaller;">(Silk Sonic)</span></li>
-        <li><strong>Let's Groove</strong> <span style="font-size: smaller;">(Earth, Wind & Fire)</span></li>
-        <li><strong>Let the Music Play</strong> <span style="font-size: smaller;">(Barry White)</span></li>
-        <li><strong>Levitating</strong> <span style="font-size: smaller;">(Dua Lipa)</span></li>
-        <li><strong>Locked Out of Heaven</strong> <span style="font-size: smaller;">(Bruno Mars)</span></li>
-        <li><strong>Lose Yourself to Dance</strong> <span style="font-size: smaller;">(Daft Punk feat. Pharrell Williams)</span></li>
-        <li><strong>My Girl</strong> <span style="font-size: smaller;">(The Temptations)</span></li>
-        <li><strong>Route 66</strong> <span style="font-size: smaller;">(Nat King Cole)</span></li>
-        <li><strong>September</strong> <span style="font-size: smaller;">(Earth, Wind & Fire)</span></li>
-        <li><strong>Save Your Tears</strong> <span style="font-size: smaller;">(The Weeknd)</span></li>
-        <li><strong>Sir Duke</strong> <span style="font-size: smaller;">(Stevie Wonder)</span></li>
-        <li><strong>Staying Alive</strong> <span style="font-size: smaller;">(Bee Gees)</span></li>
-        <li><strong>Summertime</strong> <span style="font-size: smaller;">(George Gershwin)</span></li>
-        <li><strong>Sunny</strong> <span style="font-size: smaller;">(Bobby Hebb)</span></li>
-        <li><strong>Superstition</strong> <span style="font-size: smaller;">(Stevie Wonder)</span></li>
-        <li><strong>Treasure</strong> <span style="font-size: smaller;">(Bruno Mars)</span></li>
-        <li><strong>Uptown Funk</strong> <span style="font-size: smaller;">(Mark Ronson feat. Bruno Mars)</span></li>
-        <li><strong>Use Me</strong> <span style="font-size: smaller;">(Bill Withers)</span></li>
-        <li><strong>Use Somebody</strong> <span style="font-size: smaller;">(Kings of Leon)</span></li>
-        <li><strong>Voyager</strong> <span style="font-size: smaller;">(Daft Punk)</span></li>
-        <li><strong>You Sexy Thing</strong> <span style="font-size: smaller;">(Hot Chocolate)</span></li>
-        <li><strong>Watermelon Sugar</strong> <span style="font-size: smaller;">(Harry Styles)</span></li>
+        <li>
+          <strong>Levitating</strong>
+          <span style="font-size: smaller;">(Dua Lipa)</span>
+        </li>
+        <li>
+          <strong>Don't Stop Believin'</strong>
+          <span style="font-size: smaller;">(Journey)</span>
+        </li>
+        <li>
+          <strong>Your Love</strong>
+          <span style="font-size: smaller;">(The Outfield)</span>
+        </li>
+        <li>
+          <strong>Shallow</strong>
+          <span style="font-size: smaller;">(Lady Gaga, Bradley Cooper)</span>
+        </li>
+        <li>
+          <strong>Hello</strong>
+          <span style="font-size: smaller;">(Adele)</span>
+        </li>
+        <li>
+          <strong>Set Fire to the Rain</strong>
+          <span style="font-size: smaller;">(Adele)</span>
+        </li>
+        <li>
+          <strong>Rolling in the Deep</strong>
+          <span style="font-size: smaller;">(Adele)</span>
+        </li>
+        <li>
+          <strong>Dreams</strong>
+          <span style="font-size: smaller;">(Fleetwood Mac)</span>
+        </li>
+        <li>
+          <strong>Dreams</strong>
+          <span style="font-size: smaller;">(The Cranberries)</span>
+        </li>
+        <li>
+          <strong>Somebody That I Used To Know</strong>
+          <span style="font-size: smaller;">(Gotye, Kimbra)</span>
+        </li>
+        <li>
+          <strong>Smooth Operator</strong>
+          <span style="font-size: smaller;">(Sade)</span>
+        </li>
+        <li>
+          <strong>Empire State of Mind (Part II) Broken Down</strong>
+          <span style="font-size: smaller;">(Alicia Keys)</span>
+        </li>
+        <li>
+          <strong>Try</strong>
+          <span style="font-size: smaller;">(P!nk)</span>
+        </li>
+        <li>
+          <strong>It Must Have Been Love</strong>
+          <span style="font-size: smaller;">(Roxette)</span>
+        </li>
+        <li>
+          <strong>The One That Got Away</strong>
+          <span style="font-size: smaller;">(Katy Perry)</span>
+        </li>
+        <li>
+          <strong>Flowers</strong>
+          <span style="font-size: smaller;">(Miley Cyrus)</span>
+        </li>
+        <li>
+          <strong>Nothing Compares 2 U</strong>
+          <span style="font-size: smaller;">(Sinéad O'Connor)</span>
+        </li>
+        <li>
+          <strong>Dream On</strong>
+          <span style="font-size: smaller;">(Aerosmith)</span>
+        </li>
+        <li>
+          <strong>Lost on You</strong>
+          <span style="font-size: smaller;">(LP)</span>
+        </li>
+        <li>
+          <strong>California Dreamin'</strong>
+          <span style="font-size: smaller;">(Sia)</span>
+        </li>
+        <li>
+          <strong>Fade Into You</strong>
+          <span style="font-size: smaller;">(Mazzy Star)</span>
+        </li>
+        <li>
+          <strong>Cold Heart (PNAU Remix)</strong>
+          <span style="font-size: smaller;">(Elton John, Dua Lipa, PNAU)</span>
+        </li>
+        <li>
+          <strong>Stay With Me</strong>
+          <span style="font-size: smaller;">(Sam Smith)</span>
+        </li>
+        <li>
+          <strong>Can't Take My Eyes Off of You (Black Box Mix)</strong>
+          <span style="font-size: smaller;">(Gloria Gaynor)</span>
+        </li>
+        <li>
+          <strong>I Will Survive</strong>
+          <span style="font-size: smaller;">(Gloria Gaynor)</span>
+        </li>
+        <li>
+          <strong>Watermelon Sugar</strong>
+          <span style="font-size: smaller;">(Harry Styles)</span>
+        </li>
+        <li>
+          <strong>Locked out of Heaven</strong>
+          <span style="font-size: smaller;">(Bruno Mars)</span>
+        </li>
+        <li>
+          <strong>Treasure</strong>
+          <span style="font-size: smaller;">(Bruno Mars)</span>
+        </li>
+        <li>
+          <strong>Uptown Funk (feat. Bruno Mars)</strong>
+          <span style="font-size: smaller;">(Mark Ronson, Bruno Mars)</span>
+        </li>
+        <li>
+          <strong>Sugar</strong>
+          <span style="font-size: smaller;">(Maroon 5)</span>
+        </li>
+        <li>
+          <strong>Lady (Hear Me Tonight)</strong>
+          <span style="font-size: smaller;">(Modjo)</span>
+        </li>
+        <li>
+          <strong>I Belong To You</strong>
+          <span style="font-size: smaller;">(Lenny Kravitz)</span>
+        </li>
+        <li>
+          <strong>My Girl</strong>
+          <span style="font-size: smaller;">(The Temptations)</span>
+        </li>
+        <li>
+          <strong>Calm Down (with Selena Gomez)</strong>
+          <span style="font-size: smaller;">(Rema, Selena Gomez)</span>
+        </li>
+        <li>
+          <strong>As It Was</strong>
+          <span style="font-size: smaller;">(Harry Styles)</span>
+        </li>
+        <li>
+          <strong>Lose Yourself to Dance (feat. Pharrell Williams)</strong>
+          <span style="font-size: smaller;">(Daft Punk, Pharrell Williams)</span
+          >
+        </li>
+        <li>
+          <strong>September</strong>
+          <span style="font-size: smaller;">(Earth, Wind & Fire)</span>
+        </li>
+        <li>
+          <strong>Stand By Me</strong>
+          <span style="font-size: smaller;">(Ben E. King)</span>
+        </li>
+        <li>
+          <strong>Just Give Me a Reason (feat. Nate Ruess)</strong>
+          <span style="font-size: smaller;">(P!nk, Nate Ruess)</span>
+        </li>
+        <li>
+          <strong>Just Like a Pill</strong>
+          <span style="font-size: smaller;">(P!nk)</span>
+        </li>
+        <li>
+          <strong>Can't Help Falling in Love</strong>
+          <span style="font-size: smaller;">(Elvis Presley)</span>
+        </li>
+        <li>
+          <strong>Fly Me To The Moon</strong>
+          <span style="font-size: smaller;">(Frank Sinatra, Count Basie)</span>
+        </li>
+        <li>
+          <strong>Can't Feel My Face</strong>
+          <span style="font-size: smaller;">(The Weeknd)</span>
+        </li>
+        <li>
+          <strong>Halo</strong>
+          <span style="font-size: smaller;">(Beyoncé)</span>
+        </li>
+        <li>
+          <strong>Don't Dream It's Over</strong>
+          <span style="font-size: smaller;">(Lauren Daigle)</span>
+        </li>
+        <li>
+          <strong>One</strong>
+          <span style="font-size: smaller;">(Mary J. Blige, U2)</span>
+        </li>
+        <li>
+          <strong>One Of Us</strong>
+          <span style="font-size: smaller;">(Joan Osborne)</span>
+        </li>
+        <li>
+          <strong>Ain't No Sunshine</strong>
+          <span style="font-size: smaller;">(Joan Osborne)</span>
+        </li>
+        <li>
+          <strong>The Girl From Ipanema</strong>
+          <span style="font-size: smaller;">(Amy Winehouse)</span>
+        </li>
+        <li>
+          <strong>L-O-V-E</strong>
+          <span style="font-size: smaller;">(Nat King Cole)</span>
+        </li>
+        <li>
+          <strong>Give Me One Reason</strong>
+          <span style="font-size: smaller;">(Tracy Chapman)</span>
+        </li>
+        <li>
+          <strong>Kiss Me</strong>
+          <span style="font-size: smaller;">(Sixpence None The Richer)</span>
+        </li>
+        <li>
+          <strong>Only Love Can Hurt Like This</strong>
+          <span style="font-size: smaller;">(Paloma Faith)</span>
+        </li>
+        <li>
+          <strong>Lovefool</strong>
+          <span style="font-size: smaller;">(The Cardigans)</span>
+        </li>
+        <li>
+          <strong>Mr. Brightside</strong>
+          <span style="font-size: smaller;">(The Killers)</span>
+        </li>
+        <li>
+          <strong>Read My Mind</strong>
+          <span style="font-size: smaller;">(The Killers)</span>
+        </li>
+        <li>
+          <strong>Where Is The Love?</strong>
+          <span style="font-size: smaller;">(Black Eyed Peas)</span>
+        </li>
+        <li>
+          <strong>New Light</strong>
+          <span style="font-size: smaller;">(John Mayer)</span>
+        </li>
+        <li>
+          <strong>Instant Crush</strong>
+          <span style="font-size: smaller;"
+            >(Daft Punk, Julian Casablancas)</span
+          >
+        </li>
+        <li>
+          <strong>Get Lucky (Radio Edit)</strong>
+          <span style="font-size: smaller;"
+            >(Daft Punk, Pharrell Williams, Nile Rodgers)</span
+          >
+        </li>
+        <li>
+          <strong>Sign of the Times</strong>
+          <span style="font-size: smaller;">(Harry Styles)</span>
+        </li>
+        <li>
+          <strong>Leave The Door Open</strong>
+          <span style="font-size: smaller;"
+            >(Bruno Mars, Anderson .Paak, Silk Sonic)</span
+          >
+        </li>
+        <li>
+          <strong>It Ain't Over 'Til It's Over</strong>
+          <span style="font-size: smaller;">(Lenny Kravitz)</span>
+        </li>
+        <li>
+          <strong>I Will Always Love You</strong>
+          <span style="font-size: smaller;">(Whitney Houston)</span>
+        </li>
+        <li>
+          <strong>I Wanna Dance with Somebody (Who Loves Me)</strong>
+          <span style="font-size: smaller;">(Whitney Houston)</span>
+        </li>
+        <li>
+          <strong>Fortunate Son</strong>
+          <span style="font-size: smaller;">(Creedence Clearwater Revival)</span
+          >
+        </li>
+        <li>
+          <strong>Murder On The Dancefloor</strong>
+          <span style="font-size: smaller;">(Sophie Ellis-Bextor)</span>
+        </li>
+        <li>
+          <strong>...baby one more time</strong>
+          <span style="font-size: smaller;">(The Marías)</span>
+        </li>
+        <li>
+          <strong>Stolen Dance</strong>
+          <span style="font-size: smaller;">(Milky Chance)</span>
+        </li>
+        <li>
+          <strong>Girls Just Want to Have Fun</strong>
+          <span style="font-size: smaller;">(Cyndi Lauper)</span>
+        </li>
+        <li>
+          <strong>Take on Me</strong>
+          <span style="font-size: smaller;">(a-ha)</span>
+        </li>
+        <li>
+          <strong>Stayin Alive</strong>
+          <span style="font-size: smaller;">(Bee Gees)</span>
+        </li>
+        <li>
+          <strong>Dancing Queen</strong>
+          <span style="font-size: smaller;">(ABBA)</span>
+        </li>
+        <li>
+          <strong>Kiss Me More</strong>
+          <span style="font-size: smaller;">(Doja Cat, SZA)</span>
+        </li>
       </ul>
+      <Footer />
     </main>
-    <Footer />
   </body>
 </html>
